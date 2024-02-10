@@ -47,6 +47,9 @@ console.log("Database connected successfully");
 app.use(express.json());
 
 // Create a new user
+app.get("/" ,async(req,res) => {
+  res.send("API working")
+})
 app.post("/register", async (req, res) => {
   const { username, email, password } = req.body;
   try {
